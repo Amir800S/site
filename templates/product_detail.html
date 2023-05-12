@@ -90,13 +90,13 @@
 							{% if product.characteristic %}
 							<h4>Характеристики</h4>
 							<p>{{ product.characteristic }}</p>
+							<hr>
 							{% endif %}
-						 	<hr>
 							 {% if product.options %}
 							 <h4>Параметры</h4>
 							 <p>{{ product.options }}</p>
+							 <hr>
 							 {% endif %}
-							<hr>
 							{% if product.document %}
 							<a href="{{ product.document.url }}">Подробнее о товаре</a>
 							{% endif %}
