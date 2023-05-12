@@ -87,8 +87,17 @@
 							<h2 class="pricing-plan">{{ product.title }}</h2>
 							<div class="price"><small>{{ product.price }}</small></div>
 							<p>{{ product.description }}</p>
+							<hr>
+							{% if product.document %}
+							<a href="{{ product.document.url }}">Подробнее о товаре</a>
+							{% endif %}
+							{% if product.certificate %}
+							<br>
+							<hr>
+							<a href="{{ product.certificate.url }}">Сертификат</a>
+							{% endif %}
+							<hr>
 							<a style="font-size: 11pt;" href="#" class="btn btn-select-plan btn-sm">Заказать</a>
-							</a>
 				</div>
 			<!-- </div> -->
 		</div>

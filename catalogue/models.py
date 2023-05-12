@@ -15,6 +15,8 @@ class Product(models.Model):
                               related_name='posts',
                               verbose_name='Категория',
                               help_text='Категория')
+    document = models.FileField(upload_to='documents/', null=True,blank=True)
+    certificate = models.FileField(upload_to='certificates/', null=True, blank=True)
     price = models.TextField('Цена',blank=True, null= True)
 
     class Meta:
