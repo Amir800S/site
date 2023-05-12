@@ -12,8 +12,14 @@ class ProductAdmin(admin.ModelAdmin):
         'document',
         'certificate',
         'price',
+        'options',
+        'characteristic',
     )
-    list_editable = ('title','description','document','certificate', 'image','category', 'price')
+    list_editable = (
+        'title','description','document',
+        'certificate', 'image','category', 'price', 'options',
+        'characteristic',
+    )
     search_fields = ('title', 'price')
     list_display_links = None
     empty_value_display = '-пусто-'

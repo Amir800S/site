@@ -87,6 +87,15 @@
 							<h2 class="pricing-plan">{{ product.title }}</h2>
 							<div class="price"><small>{{ product.price }}</small></div>
 							<p>{{ product.description }}</p>
+							{% if product.characteristic %}
+							<h4>Характеристики</h4>
+							<p>{{ product.characteristic }}</p>
+							{% endif %}
+						 	<hr>
+							 {% if product.options %}
+							 <h4>Параметры</h4>
+							 <p>{{ product.options }}</p>
+							 {% endif %}
 							<hr>
 							{% if product.document %}
 							<a href="{{ product.document.url }}">Подробнее о товаре</a>

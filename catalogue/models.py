@@ -18,6 +18,10 @@ class Product(models.Model):
     document = models.FileField(upload_to='documents/', null=True,blank=True)
     certificate = models.FileField(upload_to='certificates/', null=True, blank=True)
     price = models.TextField('Цена',blank=True, null= True)
+    characteristic = models.TextField('Характеристики', max_length=2500,
+                            help_text='Напишите что нибудь...', null=True, blank=True)
+    options = models.TextField('Параметры', max_length=2500,
+                            help_text='Напишите что нибудь...', null=True, blank=True)
 
     class Meta:
         """ Metaclass Products """
