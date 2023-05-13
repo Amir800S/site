@@ -108,22 +108,28 @@
 							<a style="font-size: 11pt;" href="#" class="btn btn-select-plan btn-sm">Заказать</a>
 				</div>
 		</div> -->
-		<form method="POST" action="{% url 'catalogue:callback_send' %}" autocomplete="off">
-			{% csrf_token %}
-			<div class="form-group">
-			  <label for="name">ФИО</label>
-			  <input name="name" type="name" class="form-control" id="email">
+	<div class="container py-5" style="margin-top: 600px;">
+		<div class="row justify-content-center">
+			<div class="col-md-8 p-5">
+			<div class="card">
+			<div class="card-header">
+			<div class="card-body">           
+              <form method="POST" enctype="multipart/form-data" action="{% url 'catalogue:callback_send' %}">
+              {% csrf_token %}
+              {% include 'form.html' %}
+			  {% include 'error_form.html' %}
+                <div class="d-flex justify-content-end">
+                  <button type="submit" value="Submit" class="btn btn-primary">
+						Отправить заявку
+                  </button>
+                </div>
+              </form>
 			</div>
-			<div class="form-group">
-			  <label for="phone_number">Номер телефона</label>
-			  <input name="phone_number" type="phone_number" class="form-control" id="password">
 			</div>
-			<div class="form-group form-check">
-				<label for="message">Текст заявки</label>
-			  <input name="message" type="textbox" class="form-control" id="save">
 			</div>
-			<button type="submit" value="Submit" class="btn btn-primary">Отправить заявку</button>
-		  </form>
+            </div>
+		</div>
+	</div>
 		<!-- <div class="fh5co-explore">
 			<div class="container">
 				<div class="row">

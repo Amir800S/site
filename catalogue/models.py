@@ -52,9 +52,9 @@ class Category(models.Model):
 
 class CallBack(models.Model):
     """ ORM Callback модель """
-    name = models.CharField('ФИО Клиента', max_length=70, blank=True, null=False)
-    phone_number = models.CharField('Номер клиента', max_length=70, null=False, blank=True)
-    message = models.TextField('Сообщение', max_length=500, null=False, blank=True)
+    name = models.CharField('ФИО Клиента', max_length=70, blank=True, null=False,)
+    phone_number = models.CharField('Номер клиента', max_length=70, null=False, blank=True,)
+    message = models.TextField('Сообщение', max_length=500, null=False, blank=True,)
 
     class Meta:
         """ Metaclass CallBack """
