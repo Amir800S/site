@@ -12,7 +12,7 @@ class Product(models.Model):
                               null=True)
     category = models.ForeignKey('Category', blank=True, null=True,
                               on_delete=models.SET_NULL,
-                              related_name='posts',
+                              related_name='product',
                               verbose_name='Категория',
                               help_text='Категория')
     document = models.FileField(upload_to='documents/', null=True,blank=True)
@@ -39,7 +39,7 @@ class Category(models.Model):
                               blank=True,
                               null=True)
     products = models.ForeignKey(Product, on_delete=models.CASCADE,
-                             related_name='products', null=True, blank=True)
+                             related_name='product', null=True, blank=True)
     slug = models.SlugField('URL адрес', default='slug',
                             unique=True)
 
@@ -49,3 +49,16 @@ class Category(models.Model):
 
     def __str__(self):
         return self.category_title
+
+class CallBack(models.Model):
+    """ ORM Callback модель """
+    name = models.CharField('ФИО Клиента', max_length=70, blank=True, null=False)
+    phone_number = models.CharField('Номер клиента', max_length=70, null=False, blank=True)
+    message = models.TextField('Сообщение', max_length=500, null=False, blank=True)
+
+    class Meta:
+        """ Metaclass CallBack """
+        verbose_name_plural = 'Заявки на звонок'
+
+    def __str__(self):
+        return f'Клиент {self.name}, оставил сообщение {self.message}'

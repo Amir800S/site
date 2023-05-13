@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from .models import Product, Category
+from .models import Product, Category, CallBack
 
 class ProductAdmin(admin.ModelAdmin):
-    """ Админ товаров """
+    """Админ товаров."""
     list_display = (
         'title',
         'description',
@@ -25,7 +25,7 @@ class ProductAdmin(admin.ModelAdmin):
     empty_value_display = '-пусто-'
 
 class CategoryAdmin(admin.ModelAdmin):
-    """ Админ категории """
+    """ Админ категории."""
     list_display = (
         'category_title',
         'image',
@@ -37,5 +37,17 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display_links = None
     empty_value_display = '-пусто-'
 
+class CallBackAdmin(admin.ModelAdmin):
+    """Админ заявок."""
+    list_display = (
+        'name',
+        'phone_number',
+        'message',
+    )
+    search_fields = ('name', 'phone_number', 'message',)
+    list_display_links = None
+    empty_value_display = '-пусто-'
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(CallBack, CallBackAdmin)

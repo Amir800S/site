@@ -84,12 +84,12 @@
 					{% for category in page_obj %} 	
 						<div class="col-md-3" style="text-align: center; ">
 							{% if category.image %}
-							<a href="#"> <img width="250px" height="250px" src="{{ category.image.url }}"></a>
+							<a href="{% url 'catalogue:catalogue_for_category' category.slug %}"> <img width="250px" height="250px" src="{{ category.image.url }}"></a>
 							{% endif %}
 							<h2 class="pricing-plan">{{ category.category_title }}</h2>
 							<div class="price"><small>Описание категории</small></div>
 							<p>еще какое нибудь описание. </p>
-							<a style="font-size: 11pt;" href="#" class="btn btn-select-plan btn-sm">Подробнее</a>
+							<a style="font-size: 11pt;" href="{% url 'catalogue:catalogue_for_category' category.slug %}" class="btn btn-select-plan btn-sm">Подробнее</a>
 						</div>
 				  	{% endfor %}
 			</div>
