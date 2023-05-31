@@ -53,6 +53,6 @@ def callback_send(request):
     return render(request, 'form_page.html', {'form': form})
 
 class Documents(TemplateView):
-    """Шаблон раздела 'Документы'."""
+    """Шаблон для раздела 'Документы'."""
 
     template_name = 'documents.html'
