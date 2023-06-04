@@ -4,7 +4,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ product.title }}</title>
+	<title>Как заказать</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -78,39 +78,45 @@
 		</section>
 
 	<section id="fh5co-explore" data-section="explore" >
-		<div class="container" style="margin: auto; height: auto; margin-bottom: 5%; ">
-				<div class="col-md-8 col-md-pull-1 to-animate-3">
-					<a style=""> <img width="250px" height="250px" src="{{ product.image.url }}">
+		<section id="fh5co-pricing" data-section="pricing">
+			<div class="fh5co-pricing">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 section-heading text-center">
+							<h2 class="to-animate">Как заказать</h2>
+							<div class="row">
+								<div class="col-md-8 col-md-offset-2 subtext">
+									<h3 class="to-animate">Чтобы заказать медицинское оборудование на нашем сайте 
+										Вам необходимо оформить заявку. Вы можете сделать это отправив нам письмо на email:
+										 key@mdmgroup.su, или позвонить по телефону: +7(495)136-61-18.
+									</h3>
+									<h3>
+										Также у каждой единицы товара в нашем каталоге есть кнопка «Заказать». Нажимая на нее,
+										 Вы можете отправить запрос на получение прайса на интересующий Вас товар. Наш менеджер свяжется 
+										 с Вами в ближайшее время и расскажет о том, как Вы можете приобрести интересующую Вас продукцию,
+										  а также вышлет Вам последние прайсы. </h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 section-heading text-center">
+							<h3 style="color: black; font-size: 25px;">ЗВОНИТЕ НАМ
+								МЫ ОТВЕТИМ НА ВСЕ ВОПРОСЫ
+								<h4 style="color: brown; font-size: 20px;">
+								+7(495)136-61-18
+									<br>
+								+7(966)336-08-38
+								</h4>
+							</h3>
+						</div>
+					</div>
+	
 				</div>
-				<div class="col-md-4 to-animate-3">
-					{% if product.image %}						
-							{% endif %}
-							<h2 class="pricing-plan">{{ product.title }}</h2>
-							<div class="price"><small>{{ product.price }}</small></div>
-							<p>{{ product.description }}</p>
-							{% if product.characteristic %}
-							<h4>Характеристики</h4>
-							<p>{{ product.characteristic }}</p>
-							<hr>
-							{% endif %}
-							 {% if product.options %}
-							 <h4>Параметры</h4>
-							 <p>{{ product.options }}</p>
-							 <hr>
-							 {% endif %}
-							{% if product.document %}
-							<a href="{{ product.document.url }}">Подробнее о товаре</a>
-							{% endif %}
-							{% if product.certificate %}
-							<br>
-							<hr>
-							<a href="{{ product.certificate.url }}">Сертификат</a>
-							{% endif %}
-							<hr>
-							<a style="font-size: 11pt;" href="#" class="btn btn-select-plan btn-sm">Заказать</a>
-							<a href="{% url 'catalogue:callback_send' %}"><button type="submit" value="Submit" class="btn btn-primary">Оставить заявку</button></a>
-				</div>
-		</div>
+			</div>
+		</section> 
+
+	</section>
 
 	<div id="fh5co-footer" role="contentinfo" style="height: 500px;">
 		<div class="container">

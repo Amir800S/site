@@ -4,7 +4,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ product.title }}</title>
+	<title>Контакты</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -77,40 +77,53 @@
 			</div>
 		</section>
 
-	<section id="fh5co-explore" data-section="explore" >
-		<div class="container" style="margin: auto; height: auto; margin-bottom: 5%; ">
-				<div class="col-md-8 col-md-pull-1 to-animate-3">
-					<a style=""> <img width="250px" height="250px" src="{{ product.image.url }}">
+
+
+		<section id="fh5co-services" data-section="services">
+			<div class="fh5co-services">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 section-heading text-center">
+							<h2 class="to-animate">Наши контакты</h2>
+							<div class="row">
+								<!-- <div class="col-md-8 col-md-offset-2 subtext">
+									<h3 class="to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove. </h3>
+								</div> -->
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="box-services">
+								<i><img width="45px" height="45px" src="{% static './images/map.png' %}"></i>
+								<div class="fh5co-post to-animate">
+									<h3>Где мы находимся</h3>
+									<p>129337, Г. МОСКВА,<br>
+										ЯРОСЛАВСКОЕ ШОССЕ, Д. 19, СТР. 1,
+										ЭТАЖ 5, ПОМ. I, КОМ. 7.,<br>
+										EMAIL: MED_MDM@BK.RU</p>
+								</div>
+							</div>
+	
+							<div class="box-services">
+								<i><img width="35px" height="35px" src="{% static './images/phone.png' %}"></i>
+								<div class="fh5co-post to-animate">
+									<h3>ЗВОНИТЕ НАМ
+										МЫ ОТВЕТИМ НА ВСЕ ВОПРОСЫ</h3>
+									<p>+7(000)000-00-00<br>
+										+7(000)00-00-00</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<!-- <div class="mapouter"><div class="gmap_canvas"> -->
+								<iframe width="708" height="494" id="gmap_canvas" src="https://maps.google.com/maps?q=Москва, Балашиха, Бояринова 13&t=&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+								<br><style>.mapouter{position:relative;text-align:right;height:494px;width:708px;}</style><a href="https://embedgooglemap.2yu.co"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:494px;width:750px;}</style></div></div>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-4 to-animate-3">
-					{% if product.image %}						
-							{% endif %}
-							<h2 class="pricing-plan">{{ product.title }}</h2>
-							<div class="price"><small>{{ product.price }}</small></div>
-							<p>{{ product.description }}</p>
-							{% if product.characteristic %}
-							<h4>Характеристики</h4>
-							<p>{{ product.characteristic }}</p>
-							<hr>
-							{% endif %}
-							 {% if product.options %}
-							 <h4>Параметры</h4>
-							 <p>{{ product.options }}</p>
-							 <hr>
-							 {% endif %}
-							{% if product.document %}
-							<a href="{{ product.document.url }}">Подробнее о товаре</a>
-							{% endif %}
-							{% if product.certificate %}
-							<br>
-							<hr>
-							<a href="{{ product.certificate.url }}">Сертификат</a>
-							{% endif %}
-							<hr>
-							<a style="font-size: 11pt;" href="#" class="btn btn-select-plan btn-sm">Заказать</a>
-							<a href="{% url 'catalogue:callback_send' %}"><button type="submit" value="Submit" class="btn btn-primary">Оставить заявку</button></a>
-				</div>
-		</div>
+			</div>
+		</section>	
 
 	<div id="fh5co-footer" role="contentinfo" style="height: 500px;">
 		<div class="container">
@@ -122,6 +135,7 @@
 					<a href="{% url 'catalogue:catalogue_for_category' 'reagents' %}"><p>Реагенты</p></a>
 					<a href="{% url 'catalogue:catalogue_for_category' 'vet_hemo_analyzers' %}"><p>Гематологические анализаторы (Ветеринария)</p></a>
 				</div>
+
 				<div class="col-md-4 to-animate">
 					<h3 class="section-title">Контакты</h3>
 					<p>Адрес: 129337, г.Москва,<br>

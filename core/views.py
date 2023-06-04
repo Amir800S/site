@@ -9,9 +9,9 @@ class AboutCompany(TemplateView):
 class HowToOrder(TemplateView):
     """Шаблон раздела 'Как заказать'."""
 
-    template_name = 'author.html'
+    template_name = 'how_to_order.html'
 
 class Contacts(TemplateView):
     """.Шаблон раздела 'Контакты'."""
 
-    template_name = 'author.html'
+    template_name = 'contact.html'

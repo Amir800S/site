@@ -295,7 +295,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   z-index: 2;
-  background: rgba(9, 0, 184, 0.593);
+  background: rgba(0, 0, 0, 0.881);
 }
 #fh5co-home, #fh5co-home .text-wrap {
   height: 900px;
@@ -364,7 +364,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fh5co-services, #fh5co-testimony, #fh5co-explore, #fh5co-faq, #fh5co-team, #fh5co-trusted, #fh5co-footer {
-  padding: 5em 0;
+  padding: 3em 0;
 }
 @media screen and (max-width: 768px) {
   #fh5co-services, #fh5co-testimony, #fh5co-explore, #fh5co-faq, #fh5co-team, #fh5co-trusted, #fh5co-footer {
